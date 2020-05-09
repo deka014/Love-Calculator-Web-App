@@ -1,0 +1,68 @@
+<%- include ("partials/header") %>
+<div class="content container">
+	<div class= " container-sm">
+		<h3 class="text-center danger">
+			Certificate <i class="certificate icon "></i> 
+		</h3>
+		<hr>
+		<div class="result mt-4">
+			<h4 class="text-center"> <%=data.fname%> + <%=data.sname%></h4>
+		</div>
+		<div class="result_image text-center m-4">
+		<% if(data.fname == "Deepjyoti" || data.sname == "Deepjyoti"){%>
+			 <% data.percentage = 100 %> 
+			<img class="gif rounded" src="https://media3.giphy.com/media/3ohfFpxC6ois2bzZE4/giphy.gif?cid=ecf05e47104f80321d102dbc1ce507f83539f8a2993ad0ba&rid=giphy.gif" alt="loading">
+			<%}else{%>
+
+			<% var amount = data.percentage%>
+			<%if (amount>=85) {%>
+			      <img class="gif rounded" src="https://media3.giphy.com/media/3ohfFpxC6ois2bzZE4/giphy.gif?cid=ecf05e47104f80321d102dbc1ce507f83539f8a2993ad0ba&rid=giphy.gif" alt="loading"> 
+			<%}else if (amount<85 && amount>=70) {%>
+			      <img class="gif rounded" src="https://media0.giphy.com/media/3ohfFLNX7Keis5fWGk/giphy.gif?cid=ecf05e4738e4bfd1e04d4969c179d4a8829b7de81d2c0926&rid=giphy.gif" alt="loading">
+			<%}else if (amount<70 && amount>=55) {%>
+			      <img class="gif rounded" src="https://media1.giphy.com/media/vaRCdgM0fLNrW/giphy.gif?cid=ecf05e477af6f390b78bcee9c50822d3ac6f18d71b4d7d70&rid=giphy.gif" alt="loading"> 
+			<%}else if (amount<55 && amount>=40) {%>
+			      <img class="gif rounded" src="https://media1.giphy.com/media/w5M9QgelugIJG/giphy.gif?cid=ecf05e472dd09764332b99677aae561c419accc98ccc24ed&rid=giphy.gif" alt="loading"> 
+			<%}else if (amount<40 && amount>=25) {%>
+			      <img class="gif rounded" src="https://media3.giphy.com/media/xTiIzQOp6WB9Gg1iSI/giphy.gif?cid=ecf05e47ce61b4fcb3c5662024ad3c101ecce0fd5a3e96f4&rid=giphy.gif" alt="loading">
+			<%}else if (amount<25 && amount>=10) {%>
+			      <img class="gif rounded" src="https://media0.giphy.com/media/3ohfFuqDrRTTV1v5ba/giphy.gif?cid=ecf05e47d4085ea094023291fc4b413cb9b38a2f9cfb8a36&rid=giphy.gif" alt="loading"> 
+			<%}else {%>
+			<img class="gif rounded " src="https://media3.giphy.com/media/GxOSpK0HqihRS/giphy.gif?cid=ecf05e4778fb986e4b13d6a3a9b21b598dfc63d2da4e0938&rid=giphy.gif" alt="loading"> 
+			<%}%>
+			<%}%>
+		</div>
+		<div class="progress m-auto border border-dark"style="width:480px; height:20px;">
+  		<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+  		 style="width:<%= data.percentage%>%">
+   <span style="color:black;"><strong> <%= data.percentage%>% </strong></span> 
+       </div>
+		</div>
+		<div class="mt-4 mb-4 p-0 text-center">
+			<div class="p-0 ml-3 ui button" tabindex="0">
+ 				 <div class="ui m-0 red button">
+    					<i class="heart icon"></i><%= data.percentage%>
+ 				 </div>
+			</div>
+			
+				<div class="p-0 w-0 ml-2 ui button final" tabindex="0">
+					<a href="/"> 
+ 					 <div class="ui m-0 basic blue button">
+   							 <i class="fork icon"></i>Try Again
+  					 </div>
+					</a>
+				</div>
+
+        </div>
+		
+		
+		
+
+</div>
+</div>
+
+
+	
+
+<%- include ("partials/footer") %>
+ 

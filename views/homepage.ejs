@@ -1,0 +1,54 @@
+<%- include ("partials/header") %>
+<div class="container">
+	<header class="jumbotron" style="background-image: url(https://images.unsplash.com/photo-1483512574207-bcacbd054175?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80); background-position:center; background-size: 100%">	
+	<div class = "container">
+		<h1 class="text-center pt-0 mb-4">Welcome To Love Calculator</h1>
+
+	<blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="border border-dark rounded-circle" src="https://media1.tenor.com/images/249ea0b374f634f841f1ea897cdb3ca9/tenor.gif?itemid=15693976" style="width: 100px;height:100px;">
+                
+                </div>
+                <div class="col-sm-9">
+              <p>If you live to be a hundred, I want to live to be a hundred minus one day, so I never have to live without you.</p>
+					<small><b> <em>— Winnie the Pooh</em></b></small>
+                </div>
+              </div>
+            </blockquote>
+	</div>
+</header>
+	
+			<h1 style="text-align:center;">
+	Hope For Best
+</h1>
+	<hr>
+	<div class="row">
+  <div class="col-sm-8"style="width:30%; margin: 30px auto;">
+	  <form action="/results" method="GET">
+		  <div class="form-group border border-danger rounded capital">
+	<input class="form-control"type="text" name="first" placeholder="Your Name" required>
+		  </div>
+		  <div class="form-group border border-dark rounded capital">
+	<input class="form-control"type="text" name="second" placeholder="Your Partner's Name" required>
+		  </div>  
+		  <div class="form-group">
+	<button class="ui fluid primary animated button" tabindex="0" >
+		<div class="visible content">Next</div>
+  			<div class="hidden content ">
+				<i class="p-0 ui fluid primary loading button">Loading</i>
+  		</div>
+		
+	</button>
+		  </div>
+		 
+	</form>
+	 
+	</div>
+		
+	</div>
+
+		</div>
+
+
+<%- include ("partials/footer") %>
