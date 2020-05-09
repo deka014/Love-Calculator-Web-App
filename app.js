@@ -29,7 +29,8 @@ app.get("/results",function(req,res){
 		if (error){
 		console.log(error);
 	}	else{
-	    res.render("results",{data : data });	
+	    res.render("results",{data : data });
+		console.log(fname,sname);
 		// console.log(data1)
 		// console.log(req.headers)
 	}
