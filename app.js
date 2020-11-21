@@ -1,6 +1,10 @@
 var express = require("express");
 var app = express();
 var request = require("request");
+var dotenv = require('dotenv')
+
+dotenv.config()
+
 app.set("view engine","ejs")
 
 app.use(express.static(__dirname+"/public")); 
@@ -9,6 +13,7 @@ app.get("/",function(req,res){
 	res.render("homepage")
 })
 
+console.log(process.env)
 
 app.get("/results",function(req,res){
 	
@@ -19,7 +24,7 @@ app.get("/results",function(req,res){
 	 qs: {fname: fname , sname: sname },
  	 headers: {
     'x-rapidapi-host': 'love-calculator.p.rapidapi.com',
-    'x-rapidapi-key': '<revoked Api key>'
+    'x-rapidapi-key': process.env.API_KEY
    		 }
 				  };
 
